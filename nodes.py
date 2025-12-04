@@ -35,7 +35,7 @@ COMP127 = Node(
     "Object-Oriented Programming and Abstraction",
     "COMP 127",
     "CS",
-    ["100 Level", "Required"],
+    {"100 Level", "Required"},
     [{"COMP 123"}]
 )
 
@@ -43,7 +43,7 @@ COMP128 = Node(
     "Data Structures",
     "COMP 128",
     "CS",
-    ["100 Level", "Required"],
+    {"100 Level", "Required"},
     [{"COMP 127"}]
 )
 
@@ -51,7 +51,7 @@ COMP221 = Node(
     "Algorithm Design and Analysis",
     "COMP 221",
     "CS",
-    ["200 Level", "Required"],
+    {"200 Level", "Required"},
     [{"COMP 128"}, {"MATH 279"}]
 )
 # prereq structure
