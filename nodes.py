@@ -22,7 +22,7 @@ class Node:
     def getPrereqs(self):
         return self.__prereqs
 
-# Course Nodes
+# Course Nodes (Will format this into a JSON file or use in a SQL database)
 COMP112 = Node(
      "Introduction to Data Science",
      "COMP 112",
@@ -84,7 +84,7 @@ COMP221 = Node(
      "COMP 221",
      "Computer Science",
      {"200 Level", "Required"},
-     [{"COMP 128,COMP 124"}, {"MATH 279"}]
+     [{"COMP 128" , "COMP 124"}, {"MATH 279"}]
 )
 
 COMP225 = Node(
@@ -92,7 +92,7 @@ COMP225 = Node(
      "COMP 225",
      "Computer Science",
      {"200 Level", "Required"},
-     [{"COMP 127,COMP 124"}]
+     [{"COMP 127","COMP 124"}]
 )
 
 COMP240 = Node(
@@ -571,8 +571,3 @@ STAT456 = Node(
 #   {pq1,pq2},  the stuff inside the curly brackets is OR
 #   {pq3,pq4},  the stuff curly brackets themselves is AND
 # ] this means prereqs are (pq1 or pq2) AND (pq3 or pq4)
-
-if __name__ == "__main__":
-    print(COMP123.getName())
-    print(COMP123.getDepart())
-    print(COMP123.getID())
