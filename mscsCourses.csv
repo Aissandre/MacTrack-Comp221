@@ -1,0 +1,69 @@
+MAJOR,MAJOR ABBREVIATION,LEVEL,NAME,PREREQUISITES,CROSS-LIST,DATA ANAYLISIS,WEB DEVELOPMENT,COMPUTER GRAPHICS,ROBOTICS,ARTIFICAL INTELLIGENCE,COMPUTER SECURITY
+Computer Science,COMP,112,Introduction to Data Science,None,STAT,5,3,1,4,5,4
+Computer Science,COMP,120,Computing and Society,None,None,2,2,1,1,1,2
+Computer Science,COMP,123,Core Concepts in Computer Science,None,None,5,5,5,5,5,5
+Computer Science,COMP,127,Object-Oriented Programming and Abstraction,[COMP 123],None,4,5,5,5,5,5
+Computer Science,COMP,128,Data Structures,[COMP 127],None,5,3,5,5,5,5
+Computer Science,COMP,154,Digital Ethics,None,PHIL,3,3,1,1,1,2
+Computer Science,COMP,212,Intermediate Data Science,[COMP 123;STAT 112;STAT 155],STAT,5,3,1,4,5,4
+Computer Science,COMP,221,Algorithm Design and Analysis,[COMP 128;MATH 279;COMP 124],None,5,4,4,5,5,5
+Computer Science,COMP,225,Software Design and Development,[COMP 127;COMP 124],None,1,5,4,3,4,1
+Computer Science,COMP,240,Computer Systems,[COMP 127],None,2,2,4,5,4,5
+Computer Science,COMP,272,Advanced Remote Sensing,[GEOG 352],GEOG,3,1,1,1,1,1
+Computer Science,COMP,302,Introduction to Database Management Systems,[COMP 127],None,5,3,2,3,4,5
+Computer Science,COMP,320,Computational Biology,[COMP 123],BIOL,3,1,1,1,1,1
+Computer Science,COMP,321,Software Testing,[COMP 127;COMP 128],None,1,5,1,3,4,5
+Computer Science,COMP,325,Video Games: Coding and Narrative,[COMP 127],ENGL,1,3,4,1,1,1
+Computer Science,COMP,340,Digital Electronics,[MATH 137],PHYS,1,1,1,5,3,3
+Computer Science,COMP,342,Operating Systems and Computer Architecture,[COMP 240],None,1,3,3,5,4,5
+Computer Science,COMP,361,Theory of Computation,[COMP 128;COMP 221;MATH 279],MATH,4,1,3,2,5,5
+Computer Science,COMP,364,Human-Computer Interaction,[COMP 123],None,2,5,1,1,3,1
+Computer Science,COMP,365,Computational Linear Algebra,[MATH 236;MATH 135;MATH 137;MATH 237;COMP 120;COMP 123;COMP 127;COMP 128],MATH,5,2,5,5,5,4
+Computer Science,COMP,381,Programming Languages,[COMP 128],None,3,3,2,2,3,3
+Computer Science,COMP,435,Data Visualization,[COMP 127],None,5,5,2,3,5,5
+Computer Science,COMP,440,Collective Intelligence,[COMP 221;COMP 127;STAT 253],None,5,3,1,1,3,1
+Computer Science,COMP,445,Parallel and Distributed Processing,[COMP 240;COMP 221],None,5,2,5,5,5,4
+Computer Science,COMP,446,Internet Computing,[COMP 225],None,3,5,1,1,1,4
+Computer Science,COMP,456,Projects in Data Science,[COMP 212;STAT 253],STAT,5,1,1,2,4,4
+Computer Science,COMP,465,Interactive Computer Graphics,[COMP 240],None,1,1,5,1,1,1
+Computer Science,COMP,479,Network Science,[COMP 123;MATH 236;MATH 279;COMP 221;MATH 354;STAT 354;MATH 375;MATH 379],MATH,5,3,1,3,5,3
+Computer Science,COMP,480,Bodies/Minds: AI Robotics,[COMP 221],None,1,1,1,5,4,1
+Computer Science,COMP,484,Introduction to Artificial Intelligence,[COMP 221;COMP 127;STAT 253],None,2,1,1,3,5,2
+Computer Science,COMP,487,Computer Security and Privacy,[COMP 240],None,4,1,1,1,1,5
+Mathematics,MATH,135,Applied Multivariable Calculus I,None,None,3,1,5,5,5,2
+Mathematics,MATH,137,Applied Multivariable Calculus II,None,None,3,1,5,5,5,2
+Mathematics,MATH,212,Philosophy of Mathematics,[PHIL 111;MATH 279],PHIL,1,1,1,1,1,1
+Mathematics,MATH,236,Linear Algebra,[MATH 279;MATH 137;STAT 155],None,5,2,5,5,5,4
+Mathematics,MATH,237,Applied Multivariable Calculus III,[MATH 137],None,3,1,5,5,5,2
+Mathematics,MATH,279,Discrete Mathematics,None,None,5,3,4,5,5,4
+Mathematics,MATH,312,Differential Equations,[MATH 236;MATH 237],None,3,1,4,5,4,1
+Mathematics,MATH,313,Advanced Symbolic Logic,[PHIL 111;MATH 279],PHIL,3,1,1,3,5,3
+Mathematics,MATH,354,Probability,[MATH 137;MATH 237],STAT,5,2,4,5,5,4
+Mathematics,MATH,355,Statistical Theory,[STAT 155;MATH 236;MATH 354;STAT 354],STAT,5,1,2,5,5,2
+Mathematics,MATH,361,Theory of Computation,[COMP 128;COMP 221;MATH 279;COMP 124],COMP,4,1,3,2,5,5
+Mathematics,MATH,365,Computational Linear Algebra,[MATH 236;MATH 135;MATH 137;MATH 237;COMP 120;COMP 123;COMP 127;COMP 128],COMP,5,2,5,5,5,4
+Mathematics,MATH,375,Graph Theory,[MATH 279],None,5,3,4,5,4,4
+Mathematics,MATH,376,Algebraic Structures,[MATH 279;MATH 236],None,2,1,4,3,3,5
+Mathematics,MATH,377,Real Analysis,[MATH 137;MATH 236;MATH 237;MATH 279],None,2,1,1,3,4,3
+Mathematics,MATH,378,Complex Analysis,[MATH 236;MATH 237],None,2,1,1,2,4,2
+Mathematics,MATH,379,Combinatorics,[MATH;279],None,5,2,3,4,4,3
+Mathematics,MATH,432,Mathematical Modeling,[MATH 312;COMP 120;COMP 123;COMP 124],None,5,3,5,4,5,4
+Mathematics,MATH,437,Topics in Applied Mathematics,[MATH 236;COMP 120;COMP 123;COMP 124],None,3,2,3,3,3,3
+Mathematics,MATH,465,Signal Processing,[MATH 236;COMP 123],None,5,3,3,4,4,5
+Mathematics,MATH,471,Topology,[MATH 236;MATH 365;MATH 375;MATH 376;MATH 377;MATH 378;MATH 379],None,4,3,4,3,3,3
+Mathematics,MATH,476,Representation Theory,[MATH 376],None,3,1,3,3,4,3
+Mathematics,MATH,477,Topics in Analysis,[MATH 236;MATH 377],None,5,1,1,1,3,3
+Mathematics,MATH,479,Network Science,[COMP 123;MATH 236;MATH 279;COMP 221;MATH 354;STAT 354;MATH 375;MATH 379],COMP,5,3,1,3,5,3
+Statistics,STAT,112,Introduction to Data Science,None,COMP,5,3,1,4,5,4
+Statistics,STAT,125,Epidemiology,None,None,3,1,1,1,1,1
+Statistics,STAT,155,Introduction to Statistical Modeling,None,None,5,3,2,4,4,4
+Statistics,STAT,202,Data and Society,[STAT 155;STAT 112;COMP 112],None,5,1,1,1,1,2
+Statistics,STAT,212,Intermediate Data Science,[COMP 112;COMP 123;STAT 155],COMP,5,3,1,4,5,4
+Statistics,STAT,253,Statistical Machine Learning,[STAT 155],None,4,4,3,5,5,5
+Statistics,STAT,354,Probability,[MATH 137;MATH 237],MATH,5,2,4,5,5,4
+Statistics,STAT,355,Statistical Theory,[STAT 155;MATH 236;MATH 354;STAT 354],MATH,5,1,2,5,5,2
+Statistics,STAT,451,Causal Interference,[STAT 155],None,5,1,1,2,3,4
+Statistics,STAT,452,Correlated Data,[STAT 155;MATH 354;STAT 354],None,5,1,1,3,4,3
+Statistics,STAT,453,Survival Analysis,[STAT 155;MATH 354],None,4,1,1,1,3,3
+Statistics,STAT,454,Bayesian Statistics,[STAT 155;MATH 354],None,4,3,2,4,4,4
+Statistics,STAT,456,Projects in Data Science,[STAT 212;STAT 253],COMP,5,1,1,2,4,4
