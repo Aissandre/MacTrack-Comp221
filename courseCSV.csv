@@ -34,7 +34,7 @@ Differential Equations,MATH 312,Mathematics,300 Level;Optional,MATH 236;MATH 237
 Probability,MATH 354,Mathematics,300 Level;Optional,MATH 137;MATH 237
 Statistical Theory,MATH 355,Mathematics,300 Level;Optional,"STAT 155;MATH 236;MATH 354,STAT 354"
 Theory of Computation,MATH 361,Mathematics,300 Level;Optional,"COMP 128,COMP 221;MATH 279"
-Computational Linear Algebra,MATH 365,Mathematics,300 Level;Optional,"MATH 236;MATH 135,MATH 137,MATH 237;COMP 120,COMP 123,COMP 127,COMP 128"
+Computational Linear Algebra,MATH 365,Mathematics,300 Level;Optional,"MATH 236;MATH 135,MATH 137,MATH 237;COMP 123,COMP 127,COMP 128"
 Graph Theory,MATH 375,Mathematics,300 Level;Optional,MATH 279
 Algebraic Structures,MATH 376,Mathematics,300 Level;Optional,MATH 279;MATH 236
 Real Analysis,MATH 377,Mathematics,300 Level;Optional,"MATH 137;MATH 236,MATH 237,MATH 279"

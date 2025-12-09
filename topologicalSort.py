@@ -42,24 +42,23 @@ def parsePrereqs(prereqStr):
 def sortKhans(graph):
     preqCount = {}
     dependencies = {}
-    idNode = {}                                         # this is because our current test graph is not a dictionary yet
-    for node in graph:
+
+    for node in graph.values():
         preqCount[node] = 0
         dependencies[node] = []
-        idNode[node.getID()] = node
 
     q = deque()
     output = []
 
-    for node in graph:
+    for node in graph.values():
         for preq in node.getPrereqs():
             for preqID in preq:
-                if preqID in idNode:                    # change this line after buildGraph() has been implemented
-                    prereqNode = idNode[preqID]         # remove after buildGraph() has been implemented
+                if preqID in graph:
+                    prereqNode = graph[preqID]
                     dependencies[prereqNode].append(node)
                     preqCount[node] += 1
 
-    for node in graph:
+    for node in graph.values():
         if preqCount[node] == 0:
             q.append(node)
 
@@ -75,20 +74,7 @@ def sortKhans(graph):
 
 
 if __name__ == '__main__':
-    graphTest = [
-        nodes.COMP123,
-        nodes.COMP127,
-        nodes.COMP128,
-        nodes.COMP221,
-        nodes.COMP225,
-        nodes.MATH279,
-        nodes.COMP240,
-        nodes.COMP480
-    ]
     gw = buildGraph()
-    print(gw)
-    for node in gw.values():
-        print(f"{node.getName()}: {node.getPrereqs()}")
-    # sorted_nodes = sortKhans(graphTest)
-    # for out in sorted_nodes:
-    #     print(f"{out.getID()}: {out.getName()}")
+    sorted_nodes = sortKhans(gw)
+    for out in sorted_nodes:
+        print(f"{out.getID()}: {out.getName()}")
