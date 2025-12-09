@@ -2,7 +2,7 @@ from collections import deque
 import nodes
 import csv
 
-def buildGraph():
+def buildFullGraph():
     db = csv.reader(open('courseCSV.csv', 'r'))
     courseGraph = {}
 
@@ -39,6 +39,25 @@ def parsePrereqs(prereqStr):
 
     return groups
 
+def buildSubgraph(fullgraph, targetCourse):
+    subgraph = {}
+    q = deque()
+
+    for course in targetCourse:
+        q.append(course)
+    while q:
+        u = q.popleft()
+
+        subgraph[u] = fullgraph[u]
+        course = fullgraph[u]
+        prereqGroups = course.getPrereqs()
+
+        for group in prereqGroups:
+            for prereq in group:
+                if prereq not in subgraph:
+                    q.append(prereq)
+    return subgraph
+
 def sortKhans(graph):
     preqCount = {}
     dependencies = {}
@@ -74,7 +93,14 @@ def sortKhans(graph):
 
 
 if __name__ == '__main__':
-    gw = buildGraph()
-    sorted_nodes = sortKhans(gw)
-    for out in sorted_nodes:
-        print(f"{out.getID()}: {out.getName()}")
+    print("Enter courses, separated by commas:")
+    inputCourses = [c.strip() for c in input().split(",") if c.strip()]
+
+    if not inputCourses:
+        print("No courses entered.")
+    else:
+        gw = buildFullGraph()
+        test = buildSubgraph(gw, inputCourses)
+        sorted_nodes = sortKhans(test)
+        for out in sorted_nodes:
+            print(f"{out.getID()}: {out.getName()}")
