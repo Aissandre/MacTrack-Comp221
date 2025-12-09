@@ -11,9 +11,10 @@ def buildGraph():
         ID = row[1]
         department = row[2]
 
-        # the following need parsing algorithms
+        # the following need parsing algorithms for attributes and prerequisites
         attributes = row[3]
         prerequisites = row[4]
+
         newNode = nodes.Node(
             name,
             ID,
@@ -22,6 +23,7 @@ def buildGraph():
             prerequisites
         )
         courseGraph[ID] = newNode
+
     return courseGraph
 
 def sortKhans(graph):
