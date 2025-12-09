@@ -12,8 +12,9 @@ def buildGraph():
         department = row[2]
 
         # the following need parsing algorithms
-        attributes = row[3]
-        prerequisites = row[4]
+        attributes = set(row[3].split(';'))
+        prerequisites = parsePrereqs(row[4])
+
         newNode = nodes.Node(
             name,
             ID,
@@ -22,7 +23,21 @@ def buildGraph():
             prerequisites
         )
         courseGraph[ID] = newNode
+
     return courseGraph
+
+def parsePrereqs(prereqStr):
+    if prereqStr == '':
+        return []
+
+    groups = []
+    prereqGroups = prereqStr.split(';')
+
+    for group in prereqGroups:
+        optionals = set(group.split(','))
+        groups.append(optionals)
+
+    return groups
 
 def sortKhans(graph):
     preqCount = {}
