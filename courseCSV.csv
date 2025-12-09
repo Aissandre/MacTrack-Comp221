@@ -1,60 +1,60 @@
-Introduction to Data Science,COMP 112,Computer Science,100 Level;Optional,{}
-Core Concepts in Computer Science,COMP 123,Computer Science,100 Level;Required,{}
-Object-Oriented Programming and Abstraction,COMP 127,Computer Science,100 Level;Required,{COMP 123}
-Data Structures,COMP 128,Computer Science,100 Level;Required,{COMP 127}
-Intermediate Data Science,COMP 212,Computer Science,200 Level;Optional,{COMP 123} {STAT 112} {STAT 155}
-Algorithm Design and Analysis,COMP 221,Computer Science,200 Level;Required,"{COMP 128, COMP 124} {MATH 279}"
-Software Design and Development,COMP 225,Computer Science,200 Level;Required,"{COMP 127,COMP 124}"
-Computer Systems,COMP 240,Computer Science,200 Level;Required,{COMP 127}
-Introduction to Database Management Systems,COMP 302,Computer Science,300 Level;Optional,{COMP 127}
-Computational Biology,COMP 320,Computer Science,300 Level;Optional,{COMP 123}
-Software Testing,COMP 321,Computer Science,300 Level;Optional,{COMP 127} {COMP 128}
-Video Games: Coding and Narrative,COMP 325,Computer Science,300 Level;Optional,{COMP 127}
-Operating Systems and Computer Architecture,COMP 342,Computer Science,300 Level;Optional,{COMP 240}
-Theory of Computation,COMP 361,Computer Science,300 Level;Optional,"{COMP 128,COMP 221,COMP 124} {MATH 279}"
-Human-Computer Interaction,COMP 364,Computer Science,300 Level;Optional,{COMP 123}
-Computational Linear Algebra,COMP 365,Computer Science,300 Level;Optional,"{MATH 236} {MATH 135,MATH 137,MATH 237} {COMP 120,COMP 123,COMP 127,COMP 128}"
-Programming Languages,COMP 381,Computer Science,300 Level;Optional,{COMP 128}
-Data Visualization,COMP 435,Computer Science,400 Level;Optional,{COMP 127}
-Collective Intelligence,COMP 440,Computer Science,400 Level;Optional,"{COMP 221} {COMP 127,STAT 253}"
-Parallel and Distributed Processing,COMP 445,Computer Science,400 Level;Optional,{COMP 240} {COMP 221}
-Internet Computing,COMP 446,Computer Science,400 Level;Optional,{COMP 225}
-Projects in Data Science,COMP 456,Computer Science,400 Level;Optional,{COMP 212} {STAT 253}
-Interactive Computer Graphics,COMP 465,Computer Science,400 Level;Optional,{COMP 240}
-Network Science,COMP 479,Computer Science,400 Level;Optional,"{COMP 123} {MATH 236} {MATH 279} {COMP 221,MATH 354,STAT 354,MATH 375,MATH 379}"
-Bodies/Minds: AI Robotics,COMP 480,Computer Science,400 Level;Optional,{COMP 221}
-Introduction to Artificial Intelligence,COMP 484,Computer Science,400 Level;Optional,"{COMP 221} {COMP 127,STAT 253}"
-Computer Security and Privacy,COMP 487,Computer Science,400 Level;Optional,{COMP 240}
-Applied Multivariable Calculus I,MATH 135,Mathematics,100 Level;Optional,{}
-Applied Multivariable Calculus II,MATH 137,Mathematics,100 Level;Optional,{}
-Linear Algebra,MATH 236,Mathematics,200 Level;Optional,"{MATH 279,MATH 137,STAT 155}"
-Applied Multivariable Calculus III,MATH 237,Mathematics,200 Level;Optional,{MATH 137}
-Discrete Mathematics,MATH 279,Mathematics,200 Level;Required,{}
-Differential Equations,MATH 312,Mathematics,300 Level;Optional,{MATH 236} {MATH 237}
-Probability,MATH 354,Mathematics,300 Level;Optional,{MATH 137} {MATH 237}
-Statistical Theory,MATH 355,Mathematics,300 Level;Optional,"{STAT 155} {MATH 236} {MATH 354,STAT 354}"
-Theory of Computation,MATH 361,Mathematics,300 Level;Optional,"{COMP 128,COMP 221} {MATH 279}"
-Computational Linear Algebra,MATH 365,Mathematics,300 Level;Optional,"{MATH 236} {MATH 135,MATH 137,MATH 237} {COMP 120,COMP 123,COMP 127,COMP 128}"
-Graph Theory,MATH 375,Mathematics,300 Level;Optional,{MATH 279}
-Algebraic Structures,MATH 376,Mathematics,300 Level;Optional,{MATH 279} {MATH 236}
-Real Analysis,MATH 377,Mathematics,300 Level;Optional,"{MATH 137} {MATH 236,MATH 237,MATH 279}"
-Complex Analysis,MATH 378,Mathematics,300 Level;Optional,{MATH 236} {MATH 237}
-Combinatorics,MATH 379,Mathematics,300 Level;Optional,{MATH 279}
-Mathematical Modeling,MATH 432,Mathematics,400 Level;Optional,"{MATH 312} {COMP 120,COMP 123,COMP 124}"
-Topics in Applied Mathematics,MATH 437,Mathematics,400 Level;Optional,"{MATH 236} {COMP 120,COMP 123,COMP 124}"
-Signal Processing,MATH 465,Mathematics,400 Level;Optional,{MATH 236} {COMP 123}
-Topology,MATH 471,Mathematics,400 Level;Optional,"{MATH 236} {MATH 365,MATH 375,MATH 376,MATH 377,MATH 378,MATH 379}"
-Representation Theory,MATH 476,Mathematics,400 Level;Optional,{MATH 376}
-Topics in Analysis,MATH 477,Mathematics,400 Level;Optional,{MATH 236} {MATH 377}
-Network Science,MATH 479,Mathematics,400 Level;Optional,"{COMP 123} {MATH 236} {MATH 279} {COMP 221,MATH 354,STAT 354,MATH 375,MATH 379}"
-Introduction to Data Science,STAT 112,Statistics,100 Level;Optional,{}
-Introduction to Statistical Modeling,STAT 155,Statistics,100 Level;Optional,{}
-Intermediate Data Science,STAT 212,Statistics,200 Level;Optional,{COMP 112}
-Statistical Machine Learning,STAT 253,Statistics,200 Level;Optional,{STAT 155}
-Probability,STAT 354,Statistics,300 Level;Optional,{MATH 137} {MATH 237}
-Statistical Theory,STAT 355,Statistics,300 Level;Optional,"{STAT 155} {MATH 236} {MATH 354,STAT 354}"
-Causal Inference,STAT 451,Statistics,400 Level;Optional,{STAT 155}
-Correlated Data,STAT 452,Statistics,400 Level;Optional,"{STAT 155} {MATH 354,STAT 354}"
-Survival Analysis,STAT 453,Statistics,400 Level;Optional,{STAT 155} {MATH 354}
-Bayesian Statistics,STAT 454,Statistics,400 Level;Optional,{STAT 155} {MATH 354}
-Projects in Data Science,STAT 456,Statistics,400 Level;Optional,{STAT 212} {STAT 253}
+Introduction to Data Science,COMP 112,Computer Science,100 Level;Optional,
+Core Concepts in Computer Science,COMP 123,Computer Science,100 Level;Required,
+Object-Oriented Programming and Abstraction,COMP 127,Computer Science,100 Level;Required,COMP 123
+Data Structures,COMP 128,Computer Science,100 Level;Required,COMP 127
+Intermediate Data Science,COMP 212,Computer Science,200 Level;Optional,COMP 123;STAT 112;STAT 155
+Algorithm Design and Analysis,COMP 221,Computer Science,200 Level;Required,COMP 128;MATH 279
+Software Design and Development,COMP 225,Computer Science,200 Level;Required,COMP 127
+Computer Systems,COMP 240,Computer Science,200 Level;Required,COMP 127
+Introduction to Database Management Systems,COMP 302,Computer Science,300 Level;Optional,COMP 127
+Computational Biology,COMP 320,Computer Science,300 Level;Optional,COMP 123
+Software Testing,COMP 321,Computer Science,300 Level;Optional,COMP 127;COMP 128
+Video Games: Coding and Narrative,COMP 325,Computer Science,300 Level;Optional,COMP 127
+Operating Systems and Computer Architecture,COMP 342,Computer Science,300 Level;Optional,COMP 240
+Theory of Computation,COMP 361,Computer Science,300 Level;Optional,"COMP 128,COMP 221;MATH 279"
+Human-Computer Interaction,COMP 364,Computer Science,300 Level;Optional,COMP 123
+Computational Linear Algebra,COMP 365,Computer Science,300 Level;Optional,"MATH 236;MATH 135,MATH 137,MATH 237;COMP 123,COMP 127,COMP 128"
+Programming Languages,COMP 381,Computer Science,300 Level;Optional,COMP 128
+Data Visualization,COMP 435,Computer Science,400 Level;Optional,COMP 127
+Collective Intelligence,COMP 440,Computer Science,400 Level;Optional,"COMP 221;COMP 127,STAT 253"
+Parallel and Distributed Processing,COMP 445,Computer Science,400 Level;Optional,COMP 240;COMP 221
+Internet Computing,COMP 446,Computer Science,400 Level;Optional,COMP 225
+Projects in Data Science,COMP 456,Computer Science,400 Level;Optional,COMP 212;STAT 253
+Interactive Computer Graphics,COMP 465,Computer Science,400 Level;Optional,COMP 240
+Network Science,COMP 479,Computer Science,400 Level;Optional,"COMP 123;MATH 236;MATH 279;COMP 221,MATH 354,STAT 354,MATH 375,MATH 379"
+Bodies/Minds: AI Robotics,COMP 480,Computer Science,400 Level;Optional,COMP 221
+Introduction to Artificial Intelligence,COMP 484,Computer Science,400 Level;Optional,"COMP 221;COMP 127,STAT 253"
+Computer Security and Privacy,COMP 487,Computer Science,400 Level;Optional,COMP 240
+Applied Multivariable Calculus I,MATH 135,Mathematics,100 Level;Optional,
+Applied Multivariable Calculus II,MATH 137,Mathematics,100 Level;Optional,
+Linear Algebra,MATH 236,Mathematics,200 Level;Optional,"MATH 279,MATH 137,STAT 155"
+Applied Multivariable Calculus III,MATH 237,Mathematics,200 Level;Optional,MATH 137
+Discrete Mathematics,MATH 279,Mathematics,200 Level;Required,
+Differential Equations,MATH 312,Mathematics,300 Level;Optional,MATH 236;MATH 237
+Probability,MATH 354,Mathematics,300 Level;Optional,MATH 137;MATH 237
+Statistical Theory,MATH 355,Mathematics,300 Level;Optional,"STAT 155;MATH 236;MATH 354,STAT 354"
+Theory of Computation,MATH 361,Mathematics,300 Level;Optional,"COMP 128,COMP 221;MATH 279"
+Computational Linear Algebra,MATH 365,Mathematics,300 Level;Optional,"MATH 236;MATH 135,MATH 137,MATH 237;COMP 120,COMP 123,COMP 127,COMP 128"
+Graph Theory,MATH 375,Mathematics,300 Level;Optional,MATH 279
+Algebraic Structures,MATH 376,Mathematics,300 Level;Optional,MATH 279;MATH 236
+Real Analysis,MATH 377,Mathematics,300 Level;Optional,"MATH 137;MATH 236,MATH 237,MATH 279"
+Complex Analysis,MATH 378,Mathematics,300 Level;Optional,MATH 236;MATH 237
+Combinatorics,MATH 379,Mathematics,300 Level;Optional,MATH 279
+Mathematical Modeling,MATH 432,Mathematics,400 Level;Optional,MATH 312;COMP 123
+Topics in Applied Mathematics,MATH 437,Mathematics,400 Level;Optional,MATH 236;COMP 123
+Signal Processing,MATH 465,Mathematics,400 Level;Optional,MATH 236;COMP 123
+Topology,MATH 471,Mathematics,400 Level;Optional,"MATH 236;MATH 365,MATH 375,MATH 376,MATH 377,MATH 378,MATH 379"
+Representation Theory,MATH 476,Mathematics,400 Level;Optional,MATH 376
+Topics in Analysis,MATH 477,Mathematics,400 Level;Optional,MATH 236;MATH 377
+Network Science,MATH 479,Mathematics,400 Level;Optional,"COMP 123;MATH 236;MATH 279;COMP 221,MATH 354,STAT 354,MATH 375,MATH 379"
+Introduction to Data Science,STAT 112,Statistics,100 Level;Optional,
+Introduction to Statistical Modeling,STAT 155,Statistics,100 Level;Optional,
+Intermediate Data Science,STAT 212,Statistics,200 Level;Optional,COMP 112
+Statistical Machine Learning,STAT 253,Statistics,200 Level;Optional,STAT 155
+Probability,STAT 354,Statistics,300 Level;Optional,MATH 137;MATH 237
+Statistical Theory,STAT 355,Statistics,300 Level;Optional,"STAT 155;MATH 236;MATH 354,STAT 354"
+Causal Inference,STAT 451,Statistics,400 Level;Optional,STAT 155
+Correlated Data,STAT 452,Statistics,400 Level;Optional,"STAT 155;MATH 354,STAT 354"
+Survival Analysis,STAT 453,Statistics,400 Level;Optional,STAT 155;MATH 354
+Bayesian Statistics,STAT 454,Statistics,400 Level;Optional,STAT 155;MATH 354
+Projects in Data Science,STAT 456,Statistics,400 Level;Optional,STAT 212;STAT 253
