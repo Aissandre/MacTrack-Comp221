@@ -3,18 +3,31 @@ import nodes
 import csv
 
 def buildGraph():
-    db = csv.reader(open('mscsCourses.csv', 'r'))
+    db = csv.reader(open('courseCSV.csv', 'r'))
     courseGraph = {}
-    # for row in db: for each row in the csv file
-        # make variables
-        # create the node
-        # add node to the dictionary, NodeID : new Node(...)
-    pass # placeholder
+
+    for row in db:
+        name = row[0]
+        ID = row[1]
+        department = row[2]
+
+        # the following need parsing algorithms
+        attributes = row[3]
+        prerequisites = row[4]
+        newNode = nodes.Node(
+            name,
+            ID,
+            department,
+            attributes,
+            prerequisites
+        )
+        courseGraph[ID] = newNode
+    return courseGraph
 
 def sortKhans(graph):
     preqCount = {}
     dependencies = {}
-    idNode = {}                                 # this is because our current test graph is not a dictionary yet
+    idNode = {}                                         # this is because our current test graph is not a dictionary yet
     for node in graph:
         preqCount[node] = 0
         dependencies[node] = []
@@ -26,8 +39,8 @@ def sortKhans(graph):
     for node in graph:
         for preq in node.getPrereqs():
             for preqID in preq:
-                if preqID in idNode:            # change this line after buildGraph() has been implemented
-                    prereqNode = idNode[preqID] # remove after buildGraph() has been implemented
+                if preqID in idNode:                    # change this line after buildGraph() has been implemented
+                    prereqNode = idNode[preqID]         # remove after buildGraph() has been implemented
                     dependencies[prereqNode].append(node)
                     preqCount[node] += 1
 
@@ -57,7 +70,10 @@ if __name__ == '__main__':
         nodes.COMP240,
         nodes.COMP480
     ]
-
-    sorted_nodes = sortKhans(graphTest)
-    for out in sorted_nodes:
-        print(f"{out.getID()}: {out.getName()}")
+    gw = buildGraph()
+    print(gw)
+    for node in gw.values():
+        print(f"{node.getName()}: {node.getPrereqs()}")
+    # sorted_nodes = sortKhans(graphTest)
+    # for out in sorted_nodes:
+    #     print(f"{out.getID()}: {out.getName()}")
