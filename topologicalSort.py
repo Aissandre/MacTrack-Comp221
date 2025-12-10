@@ -11,8 +11,6 @@ def buildFullGraph():
         name = row[0]
         ID = row[1]
         department = row[2]
-
-        # the following need parsing algorithms
         attributes = set(row[3].split(';'))
         prerequisites = parsePrereqs(row[4])
 
@@ -25,18 +23,7 @@ def buildFullGraph():
         )
         courseGraph[ID] = newNode
 
-#   courseGraph['adjList'] = buildAdjList()
     return courseGraph
-
-# def buildAdjList():
-#     db = csv.reader(open('adjList.csv', 'r'))
-#     adjList = {}
-#
-#     for row in db:
-#         adjClasses = set(row[1].split(';'))
-#         adjList[row[0]] = adjClasses
-#
-#     return adjList
 
 def parsePrereqs(prereqStr):
     if prereqStr == '':
@@ -121,7 +108,7 @@ def checkMajorReqs(fullGraph, subgraph):
         missingClasses.append('COMP 240')
 
 
-    # Test for the stupid requirement for 2 math/stats classes
+    # Check for math/stats electives
     validKeys = set()
     for key in subgraph.keys():
         if (key[0:4] == 'MATH' or key[0:4] == 'STAT') and int(key[5:8]) >= 135 and key != 'MATH 279':
