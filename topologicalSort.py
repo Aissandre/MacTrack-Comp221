@@ -133,7 +133,10 @@ def checkMajorReqs(fullGraph, subgraph):
             if (id[0:4] == 'MATH' or key[0:4] == 'STAT') and int(id[5:8]) >= 135 and id != 'MATH 279':
                 listOfValidClasses.append(id)
         while len(validKeys) < 2:
-            missingClasses.append(random.choice(listOfValidClasses))
+            randClass = random.choice(listOfValidClasses)
+            listOfValidClasses.remove(randClass)
+            missingClasses.append(randClass)
+            validKeys.add(randClass)
 
 
     # Check for advanced comp electives
@@ -148,20 +151,23 @@ def checkMajorReqs(fullGraph, subgraph):
             if id[0:4] == 'COMP' and int(id[5:8]) >= 300 and int(id[5:8]) <= 499:
                 listOfValidClasses.append(id)
         while len(validKeys) < 2:
-            missingClasses.append(random.choice(listOfValidClasses))
+            randClass = random.choice(listOfValidClasses)
+            listOfValidClasses.remove(randClass)
+            missingClasses.append(randClass)
+            validKeys.add(randClass)
 
 
     # Check for capstone
-    capstone = False;
+    capstone = False
     for key in subgraph.keys():
-        if key[0:4] == 'COMP' and key[5:8] >= 400 and key[5:8] != '479':
+        if key[0:4] == 'COMP' and int(key[5:8]) >= 400 and int(key[5:8]) != '479':
             capstone = True
             break
 
     if not capstone:
         listOfValidClasses = []
         for id in fullGraph.keys():
-            if id[0:4] == 'COMP' and key[5:8] >= 400 and key[5:8] != '479':
+            if id[0:4] == 'COMP' and int(key[5:8]) >= 400 and int(key[5:8]) != '479':
                 listOfValidClasses.append(id)
         missingClasses.append(random.choice(listOfValidClasses))
 
@@ -180,6 +186,6 @@ if __name__ == '__main__':
         for course in checkMajorReqs(gw, test):
             inputCourses.append(course)
         finalGraph = buildSubgraph(gw, inputCourses)
-        sorted_nodes = sortKhans(test)
+        sorted_nodes = sortKhans(finalGraph)
         for out in sorted_nodes:
             print(f"{out.getID()}: {out.getName()}")
