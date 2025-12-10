@@ -125,7 +125,6 @@ def checkMajorReqs(fullGraph, subgraph):
             missingClasses.append(randClass)
             validKeys.add(randClass)
 
-
     # Check for advanced comp electives
     validKeys = set()
     for key in subgraph.keys():
@@ -159,7 +158,6 @@ def checkMajorReqs(fullGraph, subgraph):
         missingClasses.append(random.choice(listOfValidClasses))
 
     return missingClasses
-
 
 if __name__ == '__main__':
     print("Enter courses you want to take (DEPT ###), separated by commas:")
