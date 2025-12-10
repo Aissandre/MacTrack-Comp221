@@ -1,11 +1,19 @@
 class Node:
-    def __init__(self, name, id, depart, attrib, prereqs):
+
+    def __init__(self, name, id, depart, exPreReqs, opPreReqs):
+        """
+        Initializes a node that represents an MSCS course.
+        :param name: Course title
+        :param id: Course number
+        :param depart: Department name
+        :param exPreReqs: Exclusive pre-requisites
+        :param opPreReqs: Optional pre-requisites
+        """
         self.__name = name
         self.__id = id
         self.__depart = depart
-        self.__attrib = attrib
-        self.__prereqs = prereqs
-        # maybe add info variable but not part of MVP
+        self.__exPreReqs = exPreReqs
+        self.__opPreReqs = opPreReqs
 
     def getName(self):
         return self.__name
@@ -16,14 +24,8 @@ class Node:
     def getID(self):
         return self.__id
 
-    def getAttrib(self):
-        return self.__attrib
-
-    def getPrereqs(self):
-        return self.__prereqs
-
-# prereq structure
-# prereqs = [
-#   {pq1,pq2},  the stuff inside the curly brackets is OR
-#   {pq3,pq4},  the stuff curly brackets themselves is AND
-# ] this means prereqs are (pq1 or pq2) AND (pq3 or pq4)
+    def getExPreReqs(self):
+        return self.__exPreReqs
+    
+    def getOpPreReqs(self):
+        return self.__opPreReqs
