@@ -1,6 +1,7 @@
 from collections import deque
 import nodes
 import csv
+import random
 
 def buildFullGraph():
     db = csv.reader(open('courseCSV.csv', 'r'))
@@ -24,7 +25,18 @@ def buildFullGraph():
         )
         courseGraph[ID] = newNode
 
+#   courseGraph['adjList'] = buildAdjList()
     return courseGraph
+
+# def buildAdjList():
+#     db = csv.reader(open('adjList.csv', 'r'))
+#     adjList = {}
+#
+#     for row in db:
+#         adjClasses = set(row[1].split(';'))
+#         adjList[row[0]] = adjClasses
+#
+#     return adjList
 
 def parsePrereqs(prereqStr):
     if prereqStr == '':
@@ -91,9 +103,79 @@ def sortKhans(graph):
 
     return output
 
+def checkMajorReqs(fullGraph, subgraph):
+    missingClasses = []
+    if 'COMP 123' not in subgraph and 'COMP 120' not in subgraph:
+        missingClasses.append('COMP 123')
+    if 'COMP 127' not in subgraph:
+        missingClasses.append('COMP 127')
+    if 'COMP 128' not in subgraph:
+        missingClasses.append('COMP 128')
+    if 'MATH 279' not in subgraph:
+        missingClasses.append('MATH 279')
+    if 'COMP 221' not in subgraph:
+        missingClasses.append('COMP 221')
+    if 'COMP 225' not in subgraph:
+        missingClasses.append('COMP 225')
+    if 'COMP 240' not in subgraph:
+        missingClasses.append('COMP 240')
+
+
+    # Test for the stupid requirement for 2 math/stats classes
+    validKeys = set()
+    for key in subgraph.keys():
+        if (key[0:4] == 'MATH' or key[0:4] == 'STAT') and int(key[5:8]) >= 135 and key != 'MATH 279':
+            validKeys.add(key)
+
+    if len(validKeys) < 2:
+        listOfValidClasses = []
+        for id in fullGraph.keys():
+            if (id[0:4] == 'MATH' or key[0:4] == 'STAT') and int(id[5:8]) >= 135 and id != 'MATH 279':
+                listOfValidClasses.append(id)
+        while len(validKeys) < 2:
+            randClass = random.choice(listOfValidClasses)
+            listOfValidClasses.remove(randClass)
+            missingClasses.append(randClass)
+            validKeys.add(randClass)
+
+
+    # Check for advanced comp electives
+    validKeys = set()
+    for key in subgraph.keys():
+        if key[0:4] == 'COMP' and int(key[5:8]) >= 300 and int(key[5:8]) <= 499:
+            validKeys.add(key)
+
+    if len(validKeys) < 2:
+        listOfValidClasses = []
+        for id in fullGraph.keys():
+            if id[0:4] == 'COMP' and int(id[5:8]) >= 300 and int(id[5:8]) <= 499:
+                listOfValidClasses.append(id)
+        while len(validKeys) < 2:
+            randClass = random.choice(listOfValidClasses)
+            listOfValidClasses.remove(randClass)
+            missingClasses.append(randClass)
+            validKeys.add(randClass)
+
+
+    # Check for capstone
+    capstone = False
+    for key in subgraph.keys():
+        if key[0:4] == 'COMP' and int(key[5:8]) >= 400 and int(key[5:8]) != '479':
+            capstone = True
+            break
+
+    if not capstone:
+        listOfValidClasses = []
+        for id in fullGraph.keys():
+            if id[0:4] == 'COMP' and int(key[5:8]) >= 400 and int(key[5:8]) != '479':
+                listOfValidClasses.append(id)
+        missingClasses.append(random.choice(listOfValidClasses))
+
+    return missingClasses
+
 
 if __name__ == '__main__':
-    print("Enter courses, separated by commas:")
+    print("Enter courses you want to take (DEPT ###), separated by commas:")
     inputCourses = [c.strip() for c in input().split(",") if c.strip()]
 
     if not inputCourses:
@@ -101,6 +183,9 @@ if __name__ == '__main__':
     else:
         gw = buildFullGraph()
         test = buildSubgraph(gw, inputCourses)
-        sorted_nodes = sortKhans(test)
+        for course in checkMajorReqs(gw, test):
+            inputCourses.append(course)
+        finalGraph = buildSubgraph(gw, inputCourses)
+        sorted_nodes = sortKhans(finalGraph)
         for out in sorted_nodes:
             print(f"{out.getID()}: {out.getName()}")
