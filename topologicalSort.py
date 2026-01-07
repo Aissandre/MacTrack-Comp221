@@ -3,7 +3,7 @@ import nodes
 import csv
 import random
 
-def buildFullGraph():
+def build_full_graph():
     db = csv.reader(open('courseCSV.csv', 'r'))
     courseGraph = {}
 
@@ -12,7 +12,7 @@ def buildFullGraph():
         ID = row[1]
         department = row[2]
         attributes = set(row[3].split(';'))
-        prerequisites = parsePrereqs(row[4])
+        prerequisites = parse_prereqs(row[4])
 
         newNode = nodes.Node(
             name,
@@ -25,7 +25,7 @@ def buildFullGraph():
 
     return courseGraph
 
-def parsePrereqs(prereqStr):
+def parse_prereqs(prereqStr):
     if prereqStr == '':
         return []
 
@@ -38,7 +38,7 @@ def parsePrereqs(prereqStr):
 
     return groups
 
-def buildSubgraph(fullgraph, targetCourse):
+def build_sub_graph(fullgraph, targetCourse):
     subgraph = {}
     q = deque()
 
@@ -49,7 +49,7 @@ def buildSubgraph(fullgraph, targetCourse):
 
         subgraph[u] = fullgraph[u]
         course = fullgraph[u]
-        prereqGroups = course.getPrereqs()
+        prereqGroups = course.get_course_prereqs()
 
         for group in prereqGroups:
             for prereq in group:
@@ -57,7 +57,7 @@ def buildSubgraph(fullgraph, targetCourse):
                     q.append(prereq)
     return subgraph
 
-def sortKhans(graph):
+def sort_khans(graph):
     preqCount = {}
     dependencies = {}
 
@@ -69,7 +69,7 @@ def sortKhans(graph):
     output = []
 
     for node in graph.values():
-        for preq in node.getPrereqs():
+        for preq in node.get_course_prereqs():
             for preqID in preq:
                 if preqID in graph:
                     prereqNode = graph[preqID]
@@ -166,11 +166,11 @@ if __name__ == '__main__':
     if not inputCourses:
         print("No courses entered.")
     else:
-        gw = buildFullGraph()
-        test = buildSubgraph(gw, inputCourses)
+        gw = build_full_graph()
+        test = build_sub_graph(gw, inputCourses)
         for course in checkMajorReqs(gw, test):
             inputCourses.append(course)
-        finalGraph = buildSubgraph(gw, inputCourses)
-        sorted_nodes = sortKhans(finalGraph)
+        finalGraph = build_sub_graph(gw, inputCourses)
+        sorted_nodes = sort_khans(finalGraph)
         for out in sorted_nodes:
-            print(f"{out.getID()}: {out.getName()}")
+            print(f"{out.get_course_ID()}: {out.get_course_name()}")

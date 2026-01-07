@@ -7,19 +7,19 @@ class Node:
         self.__prereqs = prereqs
         # maybe add info variable but not part of MVP
 
-    def getName(self):
+    def get_course_name(self):
         return self.__name
 
-    def getDepart(self):
+    def get_course_department(self):
         return self.__depart
 
-    def getID(self):
+    def get_course_ID(self):
         return self.__id
 
-    def getAttrib(self):
+    def get_course_attrib(self):
         return self.__attrib
 
-    def getPrereqs(self):
+    def get_course_prereqs(self):
         return self.__prereqs
 
 # prereq structure
